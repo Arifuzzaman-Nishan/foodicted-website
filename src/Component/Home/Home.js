@@ -11,13 +11,19 @@ function Home() {
                 <Navigationbar />
                 <Container>
                     <Row style={{ height: '400px' }} className="d-flex align-items-center">
-                        <Col className="primary-font" md={6}>
-                            <h2>Hungry? You are</h2>
-                            <h2>In The Right Place</h2>
-                            <h6>The best restaurants at the best price</h6>
+                        <Col md={6}>
+                            <h2 className="primary-font">Hungry? You are</h2>
+                            <h2 className="primary-font">In The Right Place</h2>
+                            <h6 className="primary-font">The best restaurants at the best price</h6>
                             <div className="">
-                                <input className="form-control form-control-lg mb-2" type="text" />
-                                <Button variant="danger">Search</Button>
+                                <input
+                                    placeholder="search the restaurants"
+                                    className="form-control form-control-lg mb-2"
+                                    type="text"
+                                />
+                                <Button className="secondary-font" variant="danger">
+                                    Search
+                                </Button>
                             </div>
                         </Col>
                     </Row>
