@@ -6,7 +6,6 @@
   background-size: cover;
   background-position: center center;
   width: 100vw;
-  background-attachment: fixed;
 }
 
 /* .no-border {
@@ -14,6 +13,6 @@
   box-shadow: none; 
 } */
 
-.banner-font {
+.primary-font {
   font-family: "Poppins", sans-serif;
 }

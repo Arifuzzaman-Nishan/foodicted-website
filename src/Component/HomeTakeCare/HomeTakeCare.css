@@ -1,0 +1,12 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
+
+.grey-color {
+  color: #626566;
+}
+.secondary-font {
+  font-family: "Nunito", sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 0.2px;
+}
