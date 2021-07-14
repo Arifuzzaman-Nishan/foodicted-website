@@ -71,20 +71,20 @@ body {
 .link:hover {
   text-decoration: none;
   color: #11101d;
-  background: #fff;
+  background: #cde3f9;
   text-align: center;
 }
 .home-content {
   position: absolute;
   height: 100%;
   width: calc(100%-240px);
-  left: 240px;
+  left: 280px;
   transition: all 0.5s ease;
 }
 .half-sidebar ~ .home-content {
   width: calc(100%-78px);
   position: absolute;
-  left: 78px;
+  left: 120px;
   transition: all 0.5s ease;
 }
 .links-name {
