@@ -6,7 +6,7 @@ export default function AdminAccountCardDetails({ item }) {
     const { title, number, percentage } = item;
     return (
         <Col className="mb-3" md={6}>
-            <Card style={{ width: '216px', height: '140px' }}>
+            <Card style={{ width: '300px', height: '142px' }}>
                 <Card.Body className="d-flex align-items-center justify-content-between">
                     <div className="text-start">
                         <h5>{title}</h5>
