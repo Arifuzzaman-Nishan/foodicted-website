@@ -58,21 +58,12 @@ export default function FavouriteItem() {
         autoplaySpeed: 2000,
         pauseOnHover: true,
     };
-    const {
-        dots,
-        infinite,
-        speed,
-        slidesToShow,
-        slidesToScroll,
-        autoplay,
-        autoplaySpeed,
-        pauseOnHover,
-    } = settings;
+    const { infinite, speed, slidesToShow, slidesToScroll, autoplay, autoplaySpeed, pauseOnHover } =
+        settings;
     return (
         <div className="mt-5 ">
             <h4>Favourite Items</h4>
             <Slider
-                dots={dots}
                 infinite={infinite}
                 speed={speed}
                 slidesToShow={slidesToShow}
@@ -80,6 +71,7 @@ export default function FavouriteItem() {
                 autoplay={autoplay}
                 autoplaySpeed={autoplaySpeed}
                 pauseOnDotsHover={pauseOnHover}
+                // accessibility={accessibility}
             >
                 {foodData.map((item) => (
                     <div>
