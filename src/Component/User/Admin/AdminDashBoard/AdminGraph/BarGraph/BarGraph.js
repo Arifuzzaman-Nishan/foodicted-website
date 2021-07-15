@@ -54,7 +54,7 @@ export default function BarGraph() {
     };
 
     return (
-        <div className="mt-5">
+        <div>
             <ReactApexChart options={options} series={series} type="bar" height={350} />
         </div>
     );

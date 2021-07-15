@@ -40,7 +40,7 @@ export default function AdminAccountCard() {
     }, []);
 
     return (
-        <div className="mt-5 ">
+        <div className="mt-5">
             <Row style={{ margin: '0' }} className="border border-danger">
                 <Col md={6}>
                     <Row>

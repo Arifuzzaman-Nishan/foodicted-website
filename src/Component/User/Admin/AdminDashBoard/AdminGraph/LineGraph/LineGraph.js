@@ -61,7 +61,7 @@ export default function LineGraph({ graphData }) {
     };
 
     return (
-        <div className="mt-5">
+        <div>
             <ReactApexChart options={options} series={series} type="area" height={350} />
         </div>
     );

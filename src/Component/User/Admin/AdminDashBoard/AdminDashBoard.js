@@ -21,7 +21,7 @@ export default function AdminDashBoard() {
         <div>
             <AdminAccountCard />
             <FavouriteItem />
-            <Row className="border border-danger">
+            <Row className="border border-danger mt-5">
                 <Col md={6}>
                     <BarGraph />
                 </Col>
