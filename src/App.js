@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './Component/Home/Home';
-import Admin from './Component/User/Admin/Admin';
+import Admin from './Component/User/Admin/Admin/Admin';
 
-function App() {
+export default function App() {
     return (
         <Router>
             <Route exact path="/" component={Home} />
@@ -11,5 +11,3 @@ function App() {
         </Router>
     );
 }
-
-export default App;

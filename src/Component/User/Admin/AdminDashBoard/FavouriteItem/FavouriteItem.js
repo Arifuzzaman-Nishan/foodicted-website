@@ -61,7 +61,7 @@ export default function FavouriteItem() {
     const { infinite, speed, slidesToShow, slidesToScroll, autoplay, autoplaySpeed, pauseOnHover } =
         settings;
     return (
-        <div className="mt-5 ">
+        <div className="mt-5 border border-success">
             <h4>Favourite Items</h4>
             <Slider
                 infinite={infinite}

@@ -1,17 +1,18 @@
+/* eslint-disable object-shorthand */
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
-import './OrderReviewGraph.css';
 
-export default function OrderReviewGraph() {
+export default function LineGraph({ graphData }) {
+    console.log(graphData);
+    if (graphData == null) return null;
+
+    const { categories, color, yData, valueName } = graphData;
+
     const series = [
         {
             name: 'Order',
-            data: [200, 445, 351, 258, 359, 558, 461],
+            data: yData,
         },
-        // {
-        //     name: 'series2',
-        //     data: [11, 32, 45, 32, 34, 52, 41],
-        // },
     ];
     const options = {
         chart: {
@@ -35,18 +36,18 @@ export default function OrderReviewGraph() {
         },
         stroke: {
             curve: 'smooth',
-            colors: ['#E66430'],
+            colors: color,
         },
         xaxis: {
             type: 'category',
-            categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            categories: categories,
         },
         tooltip: {
             // x: {
             //     format: 'dd/MM/yy HH:mm',
             // },
             y: {
-                formatter: (value) => `${value} total`,
+                formatter: (value) => `${value} ${valueName}`,
             },
         },
         // fill: {
@@ -56,7 +57,7 @@ export default function OrderReviewGraph() {
         //         opacityTo: 0,
         //     },
         // },
-        colors: ['#E66430'],
+        colors: color,
     };
 
     return (

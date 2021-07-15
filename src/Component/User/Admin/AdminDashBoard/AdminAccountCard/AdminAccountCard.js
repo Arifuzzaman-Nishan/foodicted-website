@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import 'react-circular-progressbar/dist/styles.css';
 import AdminAccountCardDetails from '../AdminAccountCardDetails/AdminAccountCardDetails';
-import AdminGraph from '../AdminGraph/AdminGraph';
+import LineGraph from '../AdminGraph/LineGraph/LineGraph';
 
 export default function AdminAccountCard() {
     const adminAccountCardData = [
@@ -27,9 +27,21 @@ export default function AdminAccountCard() {
             percentage: 60,
         },
     ];
+
+    const [graphData, setgraphData] = useState({});
+
+    useEffect(() => {
+        setgraphData({
+            yData: [31, 50, 28, 70, 45, 90, 140],
+            categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            valueName: 'thousands',
+            color: ['#4C95DD'],
+        });
+    }, []);
+
     return (
-        <div className="mt-5 ml-3">
-            <Row className="border border-danger">
+        <div className="mt-5 ">
+            <Row style={{ margin: '0' }} className="border border-danger">
                 <Col md={6}>
                     <Row>
                         {adminAccountCardData.map((item) => (
@@ -38,7 +50,7 @@ export default function AdminAccountCard() {
                     </Row>
                 </Col>
                 <Col md={6}>
-                    <AdminGraph />
+                    <LineGraph graphData={graphData} />
                 </Col>
             </Row>
         </div>
