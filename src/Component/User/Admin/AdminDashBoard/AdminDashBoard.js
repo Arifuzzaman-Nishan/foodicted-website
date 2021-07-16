@@ -25,7 +25,7 @@ export default function AdminDashBoard({ margin }) {
             <AdminHeader />
             <AdminAccountCard />
             <FavouriteItem />
-            <Row style={{ margin: '0' }} className="mt-5">
+            <Row style={{ margin: '0' }} className="mt-5 p-5 dashboard-background">
                 <Col md={6}>
                     <BarGraph />
                 </Col>

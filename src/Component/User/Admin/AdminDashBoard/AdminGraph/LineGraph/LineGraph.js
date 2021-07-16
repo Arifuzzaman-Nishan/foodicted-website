@@ -63,7 +63,7 @@ export default function LineGraph({ graphData }) {
 
     return (
         <div>
-            <Card className="m-auto p-3 shadow bd-radius" style={{ width: '35rem' }}>
+            <Card className="m-auto p-3 shadow bd-radius" style={{ width: '40rem' }}>
                 <h5 className="text-center">{title}</h5>
                 <ReactApexChart
                     options={options}

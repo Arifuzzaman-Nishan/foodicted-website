@@ -65,35 +65,37 @@ export default function FavouriteItem() {
     return (
         <div style={{ background: '#f4f0fc' }}>
             <Container className="box p-5 mt-5">
-                <h4>Favourite Items</h4>
-                <Slider
-                    // style={{ width: '95%' }}
-                    infinite={infinite}
-                    speed={speed}
-                    slidesToShow={slidesToShow}
-                    slidesToScroll={slidesToScroll}
-                    autoplay={autoplay}
-                    autoplaySpeed={autoplaySpeed}
-                    pauseOnDotsHover={pauseOnHover}
-                    // accessibility={accessibility}
-                >
-                    {foodData.map((item) => (
-                        <div>
-                            <Card style={{ width: '18rem', margin: 'auto' }}>
-                                <div>
-                                    <img className="img-fluid" src={item.img} alt="" />
+                <Card className="px-5 pb-5 pt-4">
+                    <h4 className="text-center pb-3">Favourite Items</h4>
+                    <Slider
+                        // style={{ width: '95%' }}
+                        infinite={infinite}
+                        speed={speed}
+                        slidesToShow={slidesToShow}
+                        slidesToScroll={slidesToScroll}
+                        autoplay={autoplay}
+                        autoplaySpeed={autoplaySpeed}
+                        pauseOnDotsHover={pauseOnHover}
+                        // accessibility={accessibility}
+                    >
+                        {foodData.map((item) => (
+                            <div>
+                                <div style={{ width: '18rem', margin: 'auto' }}>
+                                    <div>
+                                        <img className="img-fluid" src={item.img} alt="" />
+                                    </div>
+                                    <Card.Body>
+                                        <Card.Title>{item.title}</Card.Title>
+                                        <Card.Text>
+                                            <h6>{item.review}</h6>
+                                            <h6>{item.like}</h6>
+                                        </Card.Text>
+                                    </Card.Body>
                                 </div>
-                                <Card.Body>
-                                    <Card.Title>{item.title}</Card.Title>
-                                    <Card.Text>
-                                        <h6>{item.review}</h6>
-                                        <h6>{item.like}</h6>
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </div>
-                    ))}
-                </Slider>
+                            </div>
+                        ))}
+                    </Slider>
+                </Card>
             </Container>
         </div>
     );

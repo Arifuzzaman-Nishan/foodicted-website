@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
+import { Card } from 'react-bootstrap';
 
 export default function BarGraph() {
     const series = [
@@ -55,8 +56,10 @@ export default function BarGraph() {
 
     return (
         <div>
-            <h5>Customer Flow</h5>
-            <ReactApexChart options={options} series={series} type="bar" height={350} />
+            <Card className="m-auto p-3 shadow bd-radius" style={{ width: '40rem' }}>
+                <h5 className="text-center">Customer Flow</h5>
+                <ReactApexChart options={options} series={series} type="bar" height={300} />
+            </Card>
         </div>
     );
 }
