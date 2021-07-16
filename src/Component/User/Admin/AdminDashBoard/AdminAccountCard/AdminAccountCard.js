@@ -36,12 +36,13 @@ export default function AdminAccountCard() {
             categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
             valueName: 'thousands',
             color: ['#4C95DD'],
+            title: 'Daily Revenue',
         });
     }, []);
 
     return (
         <div className="mt-5">
-            <Row style={{ margin: '0' }} className="border border-danger">
+            <Row style={{ margin: '0' }}>
                 <Col md={6}>
                     <Row>
                         {adminAccountCardData.map((item) => (

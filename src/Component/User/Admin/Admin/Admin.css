@@ -1,3 +1,20 @@
 .width-change {
-  margin-left: 17%;
+  /* margin-left: 15%; */
 }
+.dashboard-background {
+  background: #f4f0fc;
+}
+/* body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+} */

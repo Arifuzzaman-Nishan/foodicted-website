@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
+import AdminHeader from '../AdminHeader/AdminHeader';
 import AdminAccountCard from './AdminAccountCard/AdminAccountCard';
 import BarGraph from './AdminGraph/BarGraph/BarGraph';
 import LineGraph from './AdminGraph/LineGraph/LineGraph';
@@ -14,14 +15,16 @@ export default function AdminDashBoard() {
             categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
             valueName: 'total',
             color: ['#E66430'],
+            title: 'Order Overview',
         });
     }, []);
 
     return (
-        <div>
+        <div className="border border-dark">
+            <AdminHeader />
             <AdminAccountCard />
             <FavouriteItem />
-            <Row className="border border-danger mt-5">
+            <Row style={{ margin: '0' }} className="mt-5">
                 <Col md={6}>
                     <BarGraph />
                 </Col>

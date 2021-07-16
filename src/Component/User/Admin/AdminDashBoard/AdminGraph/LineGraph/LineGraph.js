@@ -6,7 +6,7 @@ export default function LineGraph({ graphData }) {
     console.log(graphData);
     if (graphData == null) return null;
 
-    const { categories, color, yData, valueName } = graphData;
+    const { categories, color, yData, valueName, title } = graphData;
 
     const series = [
         {
@@ -62,6 +62,7 @@ export default function LineGraph({ graphData }) {
 
     return (
         <div>
+            <h5>{title}</h5>
             <ReactApexChart options={options} series={series} type="area" height={350} />
         </div>
     );
