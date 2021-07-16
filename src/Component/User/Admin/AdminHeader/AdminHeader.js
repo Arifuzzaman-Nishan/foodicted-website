@@ -12,7 +12,7 @@ import './AdminHeader.css';
 
 export default function AdminHeader() {
     return (
-        <div className="mt-5">
+        <div style={{ background: '#f4f0fc' }} className="pt-4">
             <nav className="header d-flex">
                 <ul>
                     <li>

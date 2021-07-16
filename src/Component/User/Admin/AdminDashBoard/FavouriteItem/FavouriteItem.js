@@ -59,15 +59,15 @@ export default function FavouriteItem() {
         autoplaySpeed: 3000,
         pauseOnHover: true,
     };
+
     const { infinite, speed, slidesToShow, slidesToScroll, autoplay, autoplaySpeed, pauseOnHover } =
         settings;
     return (
-        <div className="mt-5">
-            <h4>Favourite Items</h4>
-            <Container className="box">
+        <div style={{ background: '#f4f0fc' }}>
+            <Container className="box p-5 mt-5">
+                <h4>Favourite Items</h4>
                 <Slider
                     // style={{ width: '95%' }}
-                    className="border border-danger"
                     infinite={infinite}
                     speed={speed}
                     slidesToShow={slidesToShow}

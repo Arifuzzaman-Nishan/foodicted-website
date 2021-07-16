@@ -22,7 +22,6 @@ export default function AdminDashBoard({ margin }) {
 
     return (
         <div>
-            {/* <AdminSideBar /> */}
             <AdminHeader />
             <AdminAccountCard />
             <FavouriteItem />

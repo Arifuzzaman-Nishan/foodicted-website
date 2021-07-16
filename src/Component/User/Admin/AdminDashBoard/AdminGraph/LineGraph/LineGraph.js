@@ -1,6 +1,7 @@
 /* eslint-disable object-shorthand */
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
+import { Card } from 'react-bootstrap';
 
 export default function LineGraph({ graphData }) {
     console.log(graphData);
@@ -62,8 +63,16 @@ export default function LineGraph({ graphData }) {
 
     return (
         <div>
-            <h5>{title}</h5>
-            <ReactApexChart options={options} series={series} type="area" height={350} />
+            <Card className="m-auto p-3 shadow bd-radius" style={{ width: '35rem' }}>
+                <h5 className="text-center">{title}</h5>
+                <ReactApexChart
+                    options={options}
+                    series={series}
+                    type="area"
+                    height={300}
+                    // width={200}
+                />
+            </Card>
         </div>
     );
 }
