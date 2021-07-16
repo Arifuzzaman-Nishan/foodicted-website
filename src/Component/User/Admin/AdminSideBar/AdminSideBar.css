@@ -1,0 +1,19 @@
+.admin-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.pro-sidebar > .pro-sidebar-inner {
+  background-color: #0c1a32;
+}
+.pro-sidebar ~ .main-width-change {
+  margin-left: 200px;
+  transition: all 0.5s ease;
+  /* background-color: red; */
+}
+.collapsed ~ .main-width-change {
+  margin-left: 80px;
+  transition: all 0.5s ease;
+  /* background-color: red; */
+}

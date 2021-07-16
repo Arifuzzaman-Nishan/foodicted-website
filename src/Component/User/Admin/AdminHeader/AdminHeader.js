@@ -35,14 +35,17 @@ export default function AdminHeader() {
                 </ul>
                 <div className="mx-auto">
                     <li className="list-inline-item">
-                        <FontAwesomeIcon className="icon notification-color" icon={faBell} />
-                    </li>
-                    <li className="list-inline-item">
-                        <FontAwesomeIcon className="icon notification-color" icon={faEnvelope} />
+                        <FontAwesomeIcon className="header-icon notification-color" icon={faBell} />
                     </li>
                     <li className="list-inline-item">
                         <FontAwesomeIcon
-                            className="icon"
+                            className="header-icon notification-color"
+                            icon={faEnvelope}
+                        />
+                    </li>
+                    <li className="list-inline-item">
+                        <FontAwesomeIcon
+                            className="header-icon"
                             id="sidebar-color"
                             icon={faChevronCircleDown}
                         />
