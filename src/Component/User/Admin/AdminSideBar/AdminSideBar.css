@@ -5,7 +5,8 @@
   height: 100%;
 }
 .pro-sidebar > .pro-sidebar-inner {
-  background-color: #0c1a32;
+  /* background-color: #0c1a32; */
+  background: white;
 }
 .pro-sidebar ~ .main-width-change {
   margin-left: 200px;
@@ -16,4 +17,12 @@
   margin-left: 80px;
   transition: all 0.5s ease;
   /* background-color: red; */
+}
+.icon-style {
+  font-size: 2.2rem;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #4c95dd;
+  color: white;
+  box-shadow: 0 4px 5px 0 rgb(76 149 221 / 50%);
 }

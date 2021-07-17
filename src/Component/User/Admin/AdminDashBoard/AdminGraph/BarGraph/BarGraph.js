@@ -3,9 +3,11 @@ import ReactApexChart from 'react-apexcharts';
 import { Card } from 'react-bootstrap';
 
 export default function BarGraph() {
+    // data for bar graph
     const series = [
         {
             name: 'Customer',
+            // data for x axis
             data: [20, 45, 51, 58, 59, 58, 61, 35, 61, 48, 39, 68, 41, 41],
         },
     ];
@@ -35,6 +37,7 @@ export default function BarGraph() {
             colors: ['transparent'],
         },
         xaxis: {
+            // X axis data
             categories: ['15', '16', '17', '18', '19', '20', '21', '22', '23'],
         },
         yaxis: {

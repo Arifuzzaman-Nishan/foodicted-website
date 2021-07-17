@@ -12,17 +12,24 @@ export default function AdminSideBar() {
 
     return (
         <div>
-            <ProSidebar collapsed={sideBar} width="200px" className="admin-sidebar">
+            <ProSidebar
+                collapsedWidth="58px"
+                collapsed={sideBar}
+                width="200px"
+                className="admin-sidebar shadow"
+            >
                 <SidebarHeader className="mx-auto mt-3">
                     <FontAwesomeIcon
-                        style={{ fontSize: '1.5rem', cursor: 'pointer' }}
+                        style={{ fontSize: '1.5rem', cursor: 'pointer', color: '#634FD1' }}
                         onClick={() => setSideBar(!sideBar)}
                         icon={faBars}
                     />
                 </SidebarHeader>
                 <SidebarContent>
-                    <Menu iconShape="square">
-                        <MenuItem icon={<FontAwesomeIcon icon={faThLarge} />}>
+                    <Menu>
+                        <MenuItem
+                            icon={<FontAwesomeIcon className="mr-3 icon-style" icon={faThLarge} />}
+                        >
                             Dashboard
                             <Link to="/admin/dashboard" />
                         </MenuItem>
