@@ -21,7 +21,7 @@ export default function AdminDashBoard({ margin }) {
     }, []);
     // style={{ margin: '0' }}
     return (
-        <div className="p-3 dashboard-background">
+        <div className="dashboard-background">
             <AdminHeader />
             <AdminAccountCard />
             <FavouriteItem />

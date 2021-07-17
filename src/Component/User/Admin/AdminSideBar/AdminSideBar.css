@@ -6,7 +6,8 @@
 }
 .pro-sidebar > .pro-sidebar-inner {
   /* background-color: #0c1a32; */
-  background: white;
+  /* background: white; */
+  background-color: #f4f0fc;
 }
 .pro-sidebar ~ .main-width-change {
   margin-left: 200px;

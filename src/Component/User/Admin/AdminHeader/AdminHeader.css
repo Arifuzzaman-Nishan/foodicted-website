@@ -40,3 +40,15 @@
   background-color: #e3defe;
   border-color: #e3defe;
 }
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 20px;
+  /* padding: 10px; */
+  /* background-color: red; */
+}
+.active-navbar {
+  background-color: #f4f0fc;
+}
