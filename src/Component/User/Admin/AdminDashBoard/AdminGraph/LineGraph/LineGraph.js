@@ -18,7 +18,13 @@ export default function LineGraph({ graphData }) {
     const options = {
         chart: {
             height: 350,
+            width: '100%',
             type: 'area',
+            responsive: [
+                {
+                    breakpoint: 1000,
+                },
+            ],
             toolbar: {
                 // show: false,
                 tools: {
@@ -63,7 +69,7 @@ export default function LineGraph({ graphData }) {
 
     return (
         <div>
-            <Card className="m-auto p-3 shadow bd-radius" style={{ width: '40rem' }}>
+            <Card className="m-auto p-3 shadow bd-radius">
                 <h5 className="text-center">{title}</h5>
                 <ReactApexChart
                     options={options}

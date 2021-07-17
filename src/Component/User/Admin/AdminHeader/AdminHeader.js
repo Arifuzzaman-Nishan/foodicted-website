@@ -12,9 +12,9 @@ import './AdminHeader.css';
 
 export default function AdminHeader() {
     return (
-        <div style={{ background: '#f4f0fc' }} className="pt-4">
+        <div className="pt-4">
             <nav className="header d-flex">
-                <ul>
+                <ul className="d-none d-xl-block">
                     <li>
                         {/* <form action=""> */}
 
@@ -52,7 +52,7 @@ export default function AdminHeader() {
                     </li>
                     {/* <li className="list-inline-item">settings</li> */}
                 </div>
-                <ul className="ml-auto mr-5 pr-5">
+                <ul className="ml-auto">
                     <li>
                         <span>Hello, Nishan </span>
                         <img

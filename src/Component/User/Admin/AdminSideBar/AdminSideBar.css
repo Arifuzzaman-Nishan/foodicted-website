@@ -14,7 +14,7 @@
   /* background-color: red; */
 }
 .collapsed ~ .main-width-change {
-  margin-left: 80px;
+  margin-left: 60px;
   transition: all 0.5s ease;
   /* background-color: red; */
 }
@@ -25,4 +25,14 @@
   background-color: #4c95dd;
   color: white;
   box-shadow: 0 4px 5px 0 rgb(76 149 221 / 50%);
+}
+
+/* hide or display the sidebar media query */
+@media only screen and (max-width: 765px) {
+  .collapsed ~ .main-width-change {
+    margin-left: 0;
+  }
+  .pro-sidebar ~ .main-width-change {
+    margin-left: 0;
+  }
 }

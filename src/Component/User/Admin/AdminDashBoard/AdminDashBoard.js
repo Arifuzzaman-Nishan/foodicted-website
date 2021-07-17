@@ -19,17 +19,17 @@ export default function AdminDashBoard({ margin }) {
             title: 'Order Overview',
         });
     }, []);
-
+    // style={{ margin: '0' }}
     return (
-        <div>
+        <div className="p-3 dashboard-background">
             <AdminHeader />
             <AdminAccountCard />
             <FavouriteItem />
-            <Row style={{ margin: '0' }} className="mt-5 p-5 dashboard-background">
-                <Col md={6}>
+            <Row className="mt-5 p-3">
+                <Col className="mb-4" lg={6}>
                     <BarGraph />
                 </Col>
-                <Col md={6}>
+                <Col lg={6}>
                     <LineGraph graphData={graphData} />
                 </Col>
             </Row>

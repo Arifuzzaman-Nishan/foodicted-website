@@ -8,7 +8,7 @@ export default function AdminAccountCardDetails({ item }) {
         <Col className="mb-3" md={6}>
             <Card
                 className="shadow border-none"
-                style={{ borderRadius: '10px', width: '19rem', height: '142px' }}
+                style={{ borderRadius: '10px', width: '100%', height: '142px' }}
             >
                 <Card.Body className="d-flex align-items-center justify-content-between">
                     <div className="text-start">

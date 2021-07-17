@@ -16,7 +16,7 @@ export default function AdminSideBar() {
                 collapsedWidth="58px"
                 collapsed={sideBar}
                 width="200px"
-                className="admin-sidebar shadow"
+                className="admin-sidebar shadow d-none d-md-block"
             >
                 <SidebarHeader className="mx-auto mt-3">
                     <FontAwesomeIcon

@@ -41,16 +41,16 @@ export default function AdminAccountCard() {
     }, []);
 
     return (
-        <div style={{ background: '#f4f0fc' }} className="mt-5 p-5">
-            <Row style={{ margin: '0' }}>
-                <Col md={6}>
+        <div className="mt-5">
+            <Row>
+                <Col xl={6}>
                     <Row className="pt-5">
                         {adminAccountCardData.map((item) => (
                             <AdminAccountCardDetails item={item} />
                         ))}
                     </Row>
                 </Col>
-                <Col md={6}>
+                <Col xl={6}>
                     <LineGraph graphData={graphData} />
                 </Col>
             </Row>

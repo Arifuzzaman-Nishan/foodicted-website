@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Container } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import Slider from 'react-slick';
 import biryanis from '../../../../../images/foodItem/biryanis.jpg';
 import burger from '../../../../../images/foodItem/burgers.jpg';
@@ -63,40 +63,40 @@ export default function FavouriteItem() {
     const { infinite, speed, slidesToShow, slidesToScroll, autoplay, autoplaySpeed, pauseOnHover } =
         settings;
     return (
-        <div style={{ background: '#f4f0fc' }}>
-            <Container className="box p-5 mt-5">
-                <Card className="px-5 pb-5 pt-4">
-                    <h4 className="text-center pb-3">Favourite Items</h4>
-                    <Slider
-                        // style={{ width: '95%' }}
-                        infinite={infinite}
-                        speed={speed}
-                        slidesToShow={slidesToShow}
-                        slidesToScroll={slidesToScroll}
-                        autoplay={autoplay}
-                        autoplaySpeed={autoplaySpeed}
-                        pauseOnDotsHover={pauseOnHover}
-                        // accessibility={accessibility}
-                    >
-                        {foodData.map((item) => (
-                            <div>
-                                <div style={{ width: '18rem', margin: 'auto' }}>
-                                    <div>
-                                        <img className="img-fluid" src={item.img} alt="" />
-                                    </div>
-                                    <Card.Body>
-                                        <Card.Title>{item.title}</Card.Title>
-                                        <Card.Text>
-                                            <h6>{item.review}</h6>
-                                            <h6>{item.like}</h6>
-                                        </Card.Text>
-                                    </Card.Body>
+        <div className="mt-5">
+            {/* <Container className="box mt-5"> */}
+            <Card className="">
+                <h4 className="text-center">Favourite Items</h4>
+                <Slider
+                    // style={{ width: '95%' }}
+                    infinite={infinite}
+                    speed={speed}
+                    slidesToShow={slidesToShow}
+                    slidesToScroll={slidesToScroll}
+                    autoplay={autoplay}
+                    autoplaySpeed={autoplaySpeed}
+                    pauseOnDotsHover={pauseOnHover}
+                    // accessibility={accessibility}
+                >
+                    {foodData.map((item) => (
+                        <div>
+                            <div style={{ width: '18rem', margin: 'auto' }}>
+                                <div>
+                                    <img className="img-fluid" src={item.img} alt="" />
                                 </div>
+                                <Card.Body>
+                                    <Card.Title>{item.title}</Card.Title>
+                                    <Card.Text>
+                                        <h6>{item.review}</h6>
+                                        <h6>{item.like}</h6>
+                                    </Card.Text>
+                                </Card.Body>
                             </div>
-                        ))}
-                    </Slider>
-                </Card>
-            </Container>
+                        </div>
+                    ))}
+                </Slider>
+            </Card>
+            {/* </Container> */}
         </div>
     );
 }
