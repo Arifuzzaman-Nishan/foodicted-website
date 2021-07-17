@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
 import './Navigationbar.css';
 import Sidebar from './Sidebar';
@@ -15,6 +16,9 @@ function Navigationbar() {
                     <li className="list-inline-item mr-5 d-none d-md-inline">HOME</li>
                     <li className="list-inline-item mr-5 d-none d-md-inline">CART</li>
                     <li className="list-inline-item mr-5 d-none d-md-inline">SIGN IN</li>
+                    <li className="list-inline-item mr-5 d-none d-md-inline">
+                        <Link to="/admin/dashboard">ADMIN</Link>
+                    </li>
                     <li className="list-inline-item mr-3 pr-2 d-md-none d-block">
                         <Sidebar />
                     </li>

@@ -33,7 +33,10 @@ export default function AdminHeader() {
                         {/* </form> */}
                     </li>
                 </ul>
-                <div className="mx-auto">
+                <div className="ml-auto">
+                    {/* <li className="list-inline-item">settings</li> */}
+                </div>
+                <ul className="ml-auto">
                     <li className="list-inline-item">
                         <FontAwesomeIcon className="header-icon notification-color" icon={faBell} />
                     </li>
@@ -50,12 +53,10 @@ export default function AdminHeader() {
                             icon={faChevronCircleDown}
                         />
                     </li>
-                    {/* <li className="list-inline-item">settings</li> */}
-                </div>
-                <ul className="ml-auto">
-                    <li>
-                        <span>Hello, Nishan </span>
+                    <li className="list-inline-item">
+                        {/* <span>Hello, Nishan </span> */}
                         <img
+                            className="mb-4 mr-5"
                             style={{ width: '2.5rem', borderRadius: '50%' }}
                             src={boyicon}
                             alt="boyicon"
