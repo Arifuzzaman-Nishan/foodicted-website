@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import Slider from 'react-slick';
@@ -58,31 +59,46 @@ export default function FavouriteItem() {
         autoplay: true,
         autoplaySpeed: 3000,
         pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 1300,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                },
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2,
+                },
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
 
-    const { infinite, speed, slidesToShow, slidesToScroll, autoplay, autoplaySpeed, pauseOnHover } =
-        settings;
+    // const { infinite, speed, slidesToShow, slidesToScroll, autoplay, autoplaySpeed, pauseOnHover } =
+    //     settings;
     return (
         <div className="mt-5">
             {/* <Container className="box mt-5"> */}
-            <Card className="">
-                <h4 className="text-center">Favourite Items</h4>
-                <Slider
-                    // style={{ width: '95%' }}
-                    infinite={infinite}
-                    speed={speed}
-                    slidesToShow={slidesToShow}
-                    slidesToScroll={slidesToScroll}
-                    autoplay={autoplay}
-                    autoplaySpeed={autoplaySpeed}
-                    pauseOnDotsHover={pauseOnHover}
-                    // accessibility={accessibility}
-                >
+            <Card className="p-3">
+                <h4 className="text-center mb-4">Favourite Items</h4>
+                <Slider {...settings}>
                     {foodData.map((item) => (
                         <div>
-                            <div style={{ width: '18rem', margin: 'auto' }}>
+                            <div style={{ maxWidth: '15rem', margin: 'auto' }}>
                                 <div>
-                                    <img className="img-fluid" src={item.img} alt="" />
+                                    <img className="img-fluid bd-radius" src={item.img} alt="" />
                                 </div>
                                 <Card.Body>
                                     <Card.Title>{item.title}</Card.Title>

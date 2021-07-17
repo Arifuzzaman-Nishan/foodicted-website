@@ -14,7 +14,6 @@ export default function BarGraph() {
     const options = {
         chart: {
             type: 'bar',
-            height: 350,
             width: '100%',
             responsive: [
                 {
@@ -66,7 +65,7 @@ export default function BarGraph() {
     return (
         <Card className="m-auto p-3 shadow bd-radius">
             <h5 className="text-center">Customer Flow</h5>
-            <ReactApexChart options={options} series={series} type="bar" height={300} />
+            <ReactApexChart options={options} series={series} type="bar" height="250px" />
         </Card>
     );
 }

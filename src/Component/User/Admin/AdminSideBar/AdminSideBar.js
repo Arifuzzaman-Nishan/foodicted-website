@@ -28,6 +28,7 @@ export default function AdminSideBar() {
                 <SidebarContent>
                     <Menu>
                         <MenuItem
+                            className="text-dark"
                             icon={<FontAwesomeIcon className="mr-3 icon-style" icon={faThLarge} />}
                         >
                             Dashboard

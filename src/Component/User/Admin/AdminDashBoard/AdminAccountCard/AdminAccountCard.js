@@ -43,14 +43,14 @@ export default function AdminAccountCard() {
     return (
         <div className="mt-5">
             <Row>
-                <Col xl={6}>
-                    <Row className="pt-5">
+                <Col className="m-auto" xl={6}>
+                    <Row>
                         {adminAccountCardData.map((item) => (
                             <AdminAccountCardDetails item={item} />
                         ))}
                     </Row>
                 </Col>
-                <Col xl={6}>
+                <Col className="m-auto" xl={6}>
                     <LineGraph graphData={graphData} />
                 </Col>
             </Row>

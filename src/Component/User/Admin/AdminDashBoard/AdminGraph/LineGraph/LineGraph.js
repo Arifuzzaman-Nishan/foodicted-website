@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable object-shorthand */
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
@@ -17,16 +18,16 @@ export default function LineGraph({ graphData }) {
     ];
     const options = {
         chart: {
-            height: 350,
-            width: '100%',
             type: 'area',
             responsive: [
                 {
-                    breakpoint: 1000,
+                    breakpoint: 500,
+                    options: {
+                        height: 200,
+                    },
                 },
             ],
             toolbar: {
-                // show: false,
                 tools: {
                     download: true,
                     selection: false,
@@ -50,20 +51,10 @@ export default function LineGraph({ graphData }) {
             categories: categories,
         },
         tooltip: {
-            // x: {
-            //     format: 'dd/MM/yy HH:mm',
-            // },
             y: {
                 formatter: (value) => `${value} ${valueName}`,
             },
         },
-        // fill: {
-        //     gradient: {
-        //         enabled: true,
-        //         opacityFrom: 0.9,
-        //         opacityTo: 0,
-        //     },
-        // },
         colors: color,
     };
 
@@ -75,8 +66,8 @@ export default function LineGraph({ graphData }) {
                     options={options}
                     series={series}
                     type="area"
-                    height={300}
-                    // width={200}
+                    height="250px"
+                    width="100%"
                 />
             </Card>
         </div>
