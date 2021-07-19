@@ -22,3 +22,8 @@ html {
 .bd-radius {
   border-radius: 15px;
 }
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

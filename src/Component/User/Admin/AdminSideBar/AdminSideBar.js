@@ -8,6 +8,15 @@ import AdminDashBoard from '../AdminDashBoard/AdminDashBoard';
 import './AdminSideBar.css';
 
 export default function AdminSideBar() {
+    // data for desktop & laptop sidebar
+    // const sideBarData = [
+    //     {
+    //         title:'Dashboard',
+    //         icon: faThLarge,
+
+    //     }
+    // ]
+    // use for toggle sidebar
     const [sideBar, setSideBar] = useState(false);
 
     return (

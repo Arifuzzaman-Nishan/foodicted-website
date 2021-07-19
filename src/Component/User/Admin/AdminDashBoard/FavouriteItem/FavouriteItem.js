@@ -89,9 +89,9 @@ export default function FavouriteItem() {
     // const { infinite, speed, slidesToShow, slidesToScroll, autoplay, autoplaySpeed, pauseOnHover } =
     //     settings;
     return (
-        <div className="mt-5">
+        <div className="mt-5 ">
             {/* <Container className="box mt-5"> */}
-            <Card className="p-3">
+            <Card style={{ maxWidth: '95%' }} className="p-3 mx-auto">
                 <h4 className="text-center mb-4">Favourite Items</h4>
                 <Slider {...settings}>
                     {foodData.map((item) => (

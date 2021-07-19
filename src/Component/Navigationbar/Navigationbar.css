@@ -4,3 +4,19 @@
   font-family: "Mukta", sans-serif;
   cursor: pointer;
 }
+.header-bar {
+  font-size: 2.5rem;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffe1d5;
+  border-color: #ffe1d5;
+  color: #e66430;
+}
+.sidebar-icon {
+  font-size: 2.2rem;
+  padding: 10px;
+  border-radius: 50%;
+  /* background-color: #4c95dd; */
+  color: white;
+  box-shadow: 0 4px 5px 0 rgb(76 149 221 / 50%);
+}

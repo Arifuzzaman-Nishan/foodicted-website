@@ -6,8 +6,7 @@ import BarGraph from './AdminGraph/BarGraph/BarGraph';
 import LineGraph from './AdminGraph/LineGraph/LineGraph';
 import FavouriteItem from './FavouriteItem/FavouriteItem';
 
-export default function AdminDashBoard({ margin }) {
-    console.log(margin);
+export default function AdminDashBoard() {
     const [graphData, setgraphData] = useState({});
 
     useEffect(() => {
@@ -25,12 +24,12 @@ export default function AdminDashBoard({ margin }) {
             <AdminHeader />
             <AdminAccountCard />
             <FavouriteItem />
-            <Row className="mt-5 p-3">
+            <Row style={{ marginRight: '0', marginLeft: '0' }} className="mt-5">
                 <Col className="mb-4" lg={6}>
-                    <BarGraph />
+                    <LineGraph graphData={graphData} />
                 </Col>
                 <Col lg={6}>
-                    <LineGraph graphData={graphData} />
+                    <BarGraph />
                 </Col>
             </Row>
         </div>

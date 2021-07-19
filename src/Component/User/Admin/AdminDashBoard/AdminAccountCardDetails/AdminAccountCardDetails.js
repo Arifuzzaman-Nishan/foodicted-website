@@ -7,7 +7,7 @@ export default function AdminAccountCardDetails({ item }) {
     return (
         <Col className="mb-3" md={6}>
             <Card
-                className="shadow border-none"
+                className="shadow border-none mx-auto"
                 style={{ borderRadius: '10px', width: '100%', height: '142px' }}
             >
                 <Card.Body className="d-flex align-items-center justify-content-between">

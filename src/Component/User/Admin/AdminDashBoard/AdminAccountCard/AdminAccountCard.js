@@ -42,7 +42,7 @@ export default function AdminAccountCard() {
 
     return (
         <div className="mt-5">
-            <Row>
+            <Row style={{ marginRight: '0', marginLeft: '0' }}>
                 <Col className="m-auto" xl={6}>
                     <Row>
                         {adminAccountCardData.map((item) => (

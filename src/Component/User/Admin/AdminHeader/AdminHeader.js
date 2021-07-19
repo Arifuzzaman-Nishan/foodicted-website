@@ -1,17 +1,36 @@
+/* eslint-disable prettier/prettier */
 import {
     faBell,
     faChevronCircleDown,
     faEnvelope,
-    // eslint-disable-next-line prettier/prettier
-    faSearch
+    faSearch,
+    faThLarge
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import boyicon from '../../../../images/icon/boyicon.jpg';
+import Sidebar from '../../../Navigationbar/Sidebar';
 import './AdminHeader.css';
 
 export default function AdminHeader() {
+
+    const mobileSideBarData = [
+        {
+            title: 'Dashboard',
+            link: '/admin/dashboard',
+            position: 'left',
+            icon: faThLarge,
+            background: '#4C95DD',
+        },
+    ];
+    // this useState use for to change the navbar background when someone scroll
     const [scroll, setScroll] = useState(false);
+
+    // This is the data for the mobile view sidebar
+   
+    // console.log(mobileSideBarData);
+    
+    // This fuction gives the width and height when someone scroll the page
     window.onscroll = () => {
         if (window.scrollY > 100) {
             setScroll(true);
@@ -19,7 +38,7 @@ export default function AdminHeader() {
             setScroll(false);
         }
     };
-    console.log(scroll);
+    // console.log(scroll);
     return (
         <div className={`${scroll && 'active-navbar'} px-4 nav-bar`}>
             <nav className="header d-flex justify-content-xl-between justify-content-center align-items-center">
@@ -37,16 +56,19 @@ export default function AdminHeader() {
                     </div>
                 </div>
                 <div className="d-flex">
-                    <div className="mr-2">
+                    <div className=" d-block d-md-none">
+                        <Sidebar mobileSideBarData={mobileSideBarData} isAdmin="admin"/>
+                    </div>
+                    <div className="">
                         <FontAwesomeIcon className="header-icon notification-color" icon={faBell} />
                     </div>
-                    <div className="mr-2">
+                    <div className="">
                         <FontAwesomeIcon
                             className="header-icon notification-color"
                             icon={faEnvelope}
                         />
                     </div>
-                    <div className="mr-5">
+                    <div >
                         <FontAwesomeIcon
                             className="header-icon"
                             id="sidebar-color"
