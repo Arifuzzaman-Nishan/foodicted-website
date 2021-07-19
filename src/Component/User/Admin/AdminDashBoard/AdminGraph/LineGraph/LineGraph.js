@@ -39,6 +39,10 @@ export default function LineGraph({ graphData }) {
                 },
             },
         },
+        title: {
+            text: `${title}`,
+            align: 'center',
+        },
         dataLabels: {
             enabled: false,
         },
@@ -59,17 +63,14 @@ export default function LineGraph({ graphData }) {
     };
 
     return (
-        <div>
-            <Card className="m-auto p-3 shadow bd-radius">
-                <h5 className="text-center">{title}</h5>
-                <ReactApexChart
-                    options={options}
-                    series={series}
-                    type="area"
-                    height="250px"
-                    width="100%"
-                />
-            </Card>
-        </div>
+        <Card className="m-auto p-3 shadow bd-radius">
+            <ReactApexChart
+                options={options}
+                series={series}
+                type="area"
+                height="280px"
+                width="100%"
+            />
+        </Card>
     );
 }

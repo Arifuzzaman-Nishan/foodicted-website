@@ -52,3 +52,14 @@
 .active-navbar {
   background-color: #f4f0fc;
 }
+
+input[type="search"] {
+  background-color: #ffffff;
+  color: #172b4c;
+  font-size: 16px;
+  padding-left: 20px;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+  height: 45px;
+  outline-offset: -2px;
+}

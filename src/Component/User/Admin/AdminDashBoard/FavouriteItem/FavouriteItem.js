@@ -91,7 +91,7 @@ export default function FavouriteItem() {
     return (
         <div className="mt-5 ">
             {/* <Container className="box mt-5"> */}
-            <Card style={{ maxWidth: '95%' }} className="p-3 mx-auto">
+            <Card style={{ maxWidth: '95%' }} className="bd-radius p-3 mx-auto">
                 <h4 className="text-center mb-4">Favourite Items</h4>
                 <Slider {...settings}>
                     {foodData.map((item) => (

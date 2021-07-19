@@ -18,20 +18,21 @@ export default function AdminDashBoard() {
             title: 'Order Overview',
         });
     }, []);
-    // style={{ margin: '0' }}
     return (
         <div className="dashboard-background">
             <AdminHeader />
             <AdminAccountCard />
             <FavouriteItem />
+            {/* <Container> */}
             <Row style={{ marginRight: '0', marginLeft: '0' }} className="mt-5">
-                <Col className="mb-4" lg={6}>
-                    <LineGraph graphData={graphData} />
-                </Col>
-                <Col lg={6}>
+                <Col className="mb-3" lg={6}>
                     <BarGraph />
                 </Col>
+                <Col lg={6}>
+                    <LineGraph graphData={graphData} />
+                </Col>
             </Row>
+            {/* </Container> */}
         </div>
     );
 }

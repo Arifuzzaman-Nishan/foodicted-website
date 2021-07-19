@@ -4,45 +4,35 @@ import { Card } from 'react-bootstrap';
 
 export default function BarGraph() {
     // data for bar graph
-    // const series = [
-    //     {
-    //         name: 'Customer',
-    //         // data for x axis
-    //         data: [20, 45, 51, 58, 59, 58, 61, 35, 61, 48, 39, 68, 41, 41],
-    //     },
-    // ];
-
     const series = [
         {
             name: 'Customer',
-
-            // Y axis data
-            data: [20, 45, 51, 58, 59, 58, 61, 35, 61, 48, 39, 68, 41, 41],
+            // data for x axis
+            data: [20, 45, 51, 58, 59, 58, 61, 35, 61],
         },
     ];
-
     const options = {
         chart: {
             type: 'bar',
-            // width: '100%',
-            responsive: [
-                {
-                    breakpoint: 500,
-                    options: {
-                        height: 200,
-                    },
-                },
-            ],
         },
+        // legend: {
+        //     position: 'right',
+        //     verticalAlign: 'top',
+        //     containerMargin: {
+        //         left: 35,
+        //         right: 60,
+        //     },
+        // },
         plotOptions: {
             bar: {
                 horizontal: false,
-                columnWidth: '40%',
+                columnWidth: '35%',
                 endingShape: 'rounded',
-                distributed: true,
+                // distributed: true,
+                enableShades: false,
             },
         },
-        colors: ['#FAB502', '#008FFB'],
+        colors: ['#634FD1'],
         fill: {
             type: 'solid',
         },
@@ -51,7 +41,7 @@ export default function BarGraph() {
         },
         stroke: {
             show: true,
-            width: 1,
+            width: 2,
             colors: ['transparent'],
         },
         xaxis: {
@@ -60,12 +50,16 @@ export default function BarGraph() {
         },
         yaxis: {
             title: {
-                text: '(Customer) per day',
+                text: '(Customer) per date',
             },
         },
         // fill: {
         //     opacity: 1,
         // },
+        title: {
+            text: 'Customer Flow',
+            align: 'center',
+        },
         tooltip: {
             y: {
                 formatter(val) {
@@ -73,12 +67,32 @@ export default function BarGraph() {
                 },
             },
         },
+        // responsive: [
+        //     {
+        //         breakpoint: 1000,
+        //         options: {
+        //             plotOptions: {
+        //                 bar: {
+        //                     horizontal: false,
+        //                 },
+        //             },
+        //             legend: {
+        //                 position: 'bottom',
+        //             },
+        //         },
+        //     },
+        // ],
     };
 
     return (
-        <Card className="border border-danger p-3 bd-radius">
-            <h5 className="text-center">Customer Flow</h5>
-            <ReactApexChart options={options} series={series} type="bar" height="250px" />
+        <Card className="m-auto p-3 shadow bd-radius">
+            <ReactApexChart
+                options={options}
+                series={series}
+                type="bar"
+                height="280px"
+                width="100%"
+            />
         </Card>
     );
 }

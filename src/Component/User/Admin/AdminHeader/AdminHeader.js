@@ -43,7 +43,7 @@ export default function AdminHeader() {
         <div className={`${scroll && 'active-navbar'} px-4 nav-bar`}>
             <nav className="header d-flex justify-content-xl-between justify-content-center align-items-center">
                 <div className="d-none d-xl-block">
-                    <div className="input-group d-flex border">
+                    <div className="input-group d-flex ">
                         <input
                             placeholder="Search"
                             className="form-control shadow-none search-box"
@@ -56,26 +56,26 @@ export default function AdminHeader() {
                     </div>
                 </div>
                 <div className="d-flex">
-                    <div className=" d-block d-md-none">
+                    <div className="pr-2 pl-2 d-block d-md-none">
                         <Sidebar mobileSideBarData={mobileSideBarData} isAdmin="admin"/>
                     </div>
-                    <div className="">
+                    <div className="pr-2 pl-4">
                         <FontAwesomeIcon className="header-icon notification-color" icon={faBell} />
                     </div>
-                    <div className="">
+                    <div className="pr-2">
                         <FontAwesomeIcon
                             className="header-icon notification-color"
                             icon={faEnvelope}
                         />
                     </div>
-                    <div >
+                    <div className="mr-3 pr-3">
                         <FontAwesomeIcon
                             className="header-icon"
                             id="sidebar-color"
                             icon={faChevronCircleDown}
                         />
                     </div>
-                    <div className="mr-5">
+                    <div className="ml">
                         <img
                             className=""
                             style={{ width: '2.5rem', borderRadius: '50%' }}
