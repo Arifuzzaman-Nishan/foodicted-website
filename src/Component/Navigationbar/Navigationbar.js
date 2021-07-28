@@ -5,6 +5,28 @@ import './Navigationbar.css';
 import Sidebar from './Sidebar';
 
 function Navigationbar() {
+    const mobileSideBarData = [
+        {
+            title: 'Home',
+            link: '/home',
+            // position: 'right',
+            // icon: faThLarge,
+            // background: '#4C95DD',
+        },
+        {
+            title: 'CART',
+            link: '/home',
+        },
+        {
+            title: 'SIGN IN',
+            link: '/home',
+        },
+        {
+            title: 'ADMIN',
+            link: '/admin/dashboard',
+        },
+    ];
+
     return (
         <div className="nav-font">
             <ul className="list-unstyled d-flex align-items-center">
@@ -20,7 +42,7 @@ function Navigationbar() {
                         <Link to="/admin/dashboard">ADMIN</Link>
                     </li>
                     <li className="list-inline-item mr-3 pr-2 d-md-none d-block">
-                        <Sidebar />
+                        <Sidebar mobileSideBarData={mobileSideBarData} />
                     </li>
                 </div>
             </ul>

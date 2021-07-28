@@ -9,24 +9,11 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Sidebar({ mobileSideBarData, isAdmin }) {
-    // console.log(mobileSideBarData, isAdmin);
-    console.log(mobileSideBarData);
-
-    // const mobileSideBarData = [
-    //     {
-    //         title: 'Dashboard',
-    //         link: '/admin/dashboard',
-    //         position: 'left',
-    //         icon: faThLarge,
-    //         background: '#4C95DD',
-    //     },
-    // ];
-
-    // to store the webpage width the state
+    // to store the width of the website
     const [width, setWidth] = useState(document.documentElement.clientWidth);
 
     // conditionally call the onClose function
-    const [count, setCount] = useState(0);
+    const [open, setOpen] = useState(false);
 
     // this state for to open the drawer and close the drawer
     const [visible, setVisible] = useState(false);
@@ -36,19 +23,13 @@ export default function Sidebar({ mobileSideBarData, isAdmin }) {
         setWidth(document.documentElement.clientWidth);
     };
 
-    // const navData = [
-    //     { title: 'HOME', link: '/' },
-    //     { title: 'CART', link: '/' },
-    //     { title: 'SIGN IN', link: '/' },
-    //     { title: 'ADMIN', link: '/admin/dashboard' },
-    // ];
-
     const showDrawer = () => {
         setVisible(true);
+        setOpen(true);
     };
-    const onClose = (value = 'web') => {
+
+    const onClose = (value) => {
         setVisible(false);
-        value === 'mobile' && setCount((prevstate) => prevstate + 1);
     };
 
     // this useEffect is call when the browser width is change
@@ -59,10 +40,12 @@ export default function Sidebar({ mobileSideBarData, isAdmin }) {
 
     // this is works when the page width is greater then 767 and onClose call for one time
     useEffect(() => {
-        if (count === 0) {
-            width > 767 && onClose('mobile');
+        if (open) {
+            if (width > 767) {
+                onClose();
+            }
         }
-    }, [count, width]);
+    }, [open, width]);
 
     return (
         <div>
