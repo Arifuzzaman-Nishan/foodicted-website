@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import 'react-circular-progressbar/dist/styles.css';
 import AdminAccountCardDetails from '../AdminAccountCardDetails/AdminAccountCardDetails';
@@ -28,17 +28,25 @@ export default function AdminAccountCard() {
         },
     ];
 
-    const [graphData, setgraphData] = useState({});
+    // const [graphData, setgraphData] = useState({});
 
-    useEffect(() => {
-        setgraphData({
-            yData: [31, 50, 28, 70, 45, 90, 140],
-            categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-            valueName: 'thousands',
-            color: ['#4C95DD'],
-            title: 'Daily Revenue',
-        });
-    }, []);
+    const graphData = {
+        yData: [31, 50, 28, 70, 45, 90, 140],
+        categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        valueName: 'thousands',
+        color: ['#4C95DD'],
+        title: 'Daily Revenue',
+    };
+
+    // useEffect(() => {
+    //     setgraphData({
+    //         yData: [31, 50, 28, 70, 45, 90, 140],
+    //         categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    //         valueName: 'thousands',
+    //         color: ['#4C95DD'],
+    //         title: 'Daily Revenue',
+    //     });
+    // }, []);
 
     return (
         <div className="mt-5">

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
-import HomeTakeCare from '../HomeTakeCare/HomeTakeCare';
 import Navigationbar from '../Navigationbar/Navigationbar';
+import FavouriteItem from '../User/Admin/AdminDashBoard/FavouriteItem/FavouriteItem';
 import './Home.css';
+import HomeTakeCare from './HomeTakeCare/HomeTakeCare';
 
-function Home() {
+export default function Home() {
     return (
         <div>
             <div className="banner">
@@ -30,8 +31,10 @@ function Home() {
                 </Container>
             </div>
             <HomeTakeCare />
+            <div className="my-5 py-5">
+                <h2 className="text-center mb-5">OUR FEATURED MENU</h2>
+                <FavouriteItem home="home" />
+            </div>
         </div>
     );
 }
-
-export default Home;

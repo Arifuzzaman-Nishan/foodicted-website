@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
-import connectWorld from '../../images/connectWorld.svg';
-import couriers from '../../images/Couriers.svg';
-import delivery from '../../images/deliver.svg';
-import order from '../../images/order.svg';
+import connectWorld from '../../../images/connectWorld.svg';
+import couriers from '../../../images/Couriers.svg';
+import delivery from '../../../images/deliver.svg';
+import order from '../../../images/order.svg';
 import './HomeTakeCare.css';
 import HomeTakeCareDetails from './HomeTakeCareDetails';
 

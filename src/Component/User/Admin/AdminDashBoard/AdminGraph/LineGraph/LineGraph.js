@@ -5,8 +5,8 @@ import ReactApexChart from 'react-apexcharts';
 import { Card } from 'react-bootstrap';
 
 export default function LineGraph({ graphData }) {
-    // console.log(graphData);
-    if (graphData == null) return null;
+    console.log(graphData);
+    // if (graphData == null) return null;
 
     const { categories, color, yData, valueName, title } = graphData;
 

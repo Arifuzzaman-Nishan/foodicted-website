@@ -16,6 +16,7 @@ export default function AdminSideBar() {
 
     //     }
     // ]
+
     // use for toggle sidebar
     const [sideBar, setSideBar] = useState(false);
 
@@ -34,6 +35,8 @@ export default function AdminSideBar() {
                         icon={faBars}
                     />
                 </SidebarHeader>
+
+                {/* here are the menu of the sidebar */}
                 <SidebarContent>
                     <Menu>
                         <MenuItem
@@ -46,6 +49,8 @@ export default function AdminSideBar() {
                     </Menu>
                 </SidebarContent>
             </ProSidebar>
+
+            {/* Right side page */}
             <div className="main-width-change">
                 <AdminDashBoard />
             </div>

@@ -1,118 +1,49 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import Slider from 'react-slick';
-import biryanis from '../../../../../images/foodItem/biryanis.jpg';
-import burger from '../../../../../images/foodItem/burgers.jpg';
-import dal from '../../../../../images/foodItem/dals.jpg';
-import vegetablejalfrezi from '../../../../../images/foodItem/main.jpg';
-import noodles from '../../../../../images/foodItem/noodles.jpg';
-import subziyan from '../../../../../images/foodItem/subziyan.jpg';
+import foodData from '../../../../../FakeData/favouriteFoodItem/favouriteFoodItem';
+import { foodDetails } from '../../../../redux/foodDetails/foodDetailsAction';
+import settings from './carouselSettingData';
 import './FavouriteItem.css';
 
-export default function FavouriteItem() {
-    const foodData = [
-        {
-            title: 'Biryanis',
-            img: biryanis,
-            review: '150 Review',
-            like: '12K',
-        },
-        {
-            title: 'burger',
-            img: burger,
-            review: '150 Review',
-            like: '12K',
-        },
-        {
-            title: 'dal',
-            img: dal,
-            review: '150 Review',
-            like: '12K',
-        },
-        {
-            title: 'vegetableJalfrez',
-            img: vegetablejalfrezi,
-            review: '150 Review',
-            like: '12K',
-        },
-        {
-            title: 'noodles',
-            img: noodles,
-            review: '150 Review',
-            like: '12K',
-        },
-        {
-            title: 'subziyan',
-            img: subziyan,
-            review: '150 Review',
-            like: '12K',
-        },
-    ];
+export default function FavouriteItem({ home }) {
+    // react-router useHistory hook
+    const history = useHistory();
 
-    const settings = {
-        // dots: true,
-        infinite: true,
-        speed: 1000,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        pauseOnHover: true,
-        responsive: [
-            {
-                breakpoint: 1300,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                },
-            },
-            {
-                breakpoint: 1000,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2,
-                },
-            },
-            {
-                breakpoint: 640,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
+    // react-redux useDispatch hook to dispatch an action
+    const dispatch = useDispatch();
+
+    // this function take all the selected food item
+    const handleClick = (item) => {
+        history.push(`/food/${item.title}`);
+
+        // here dispatch the action and the dispatch takes an action creator which is a function
+        dispatch(foodDetails(item));
     };
 
-    // const { infinite, speed, slidesToShow, slidesToScroll, autoplay, autoplaySpeed, pauseOnHover } =
-    //     settings;
     return (
-        <div className="mt-5 ">
-            {/* <Container className="box mt-5"> */}
-            <Card style={{ maxWidth: '95%' }} className="bd-radius p-3 mx-auto">
-                <h4 className="text-center mb-4">Favourite Items</h4>
-                <Slider {...settings}>
-                    {foodData.map((item) => (
+        <Slider {...settings}>
+            {foodData.map((item) => (
+                <div onClick={() => home && handleClick(item)}>
+                    <div style={{ maxWidth: '15rem', margin: 'auto', cursor: home && 'pointer' }}>
                         <div>
-                            <div style={{ maxWidth: '15rem', margin: 'auto' }}>
-                                <div>
-                                    <img className="img-fluid bd-radius" src={item.img} alt="" />
-                                </div>
-                                <Card.Body>
-                                    <Card.Title>{item.title}</Card.Title>
-                                    <Card.Text>
-                                        <h6>{item.review}</h6>
-                                        <h6>{item.like}</h6>
-                                    </Card.Text>
-                                </Card.Body>
-                            </div>
+                            <img className="img-fluid bd-radius" src={item.img} alt="" />
                         </div>
-                    ))}
-                </Slider>
-            </Card>
-            {/* </Container> */}
-        </div>
+                        <Card.Body>
+                            <Card.Title>{item.title}</Card.Title>
+                            <Card.Text>
+                                <h6>{item.review}</h6>
+                                <h6>{item.like}</h6>
+                            </Card.Text>
+                            {home && <Button variant="danger">Details</Button>}
+                        </Card.Body>
+                    </div>
+                </div>
+            ))}
+        </Slider>
     );
 }
