@@ -11,36 +11,42 @@ const foodData = [
         img: biryanis,
         review: '150 Review',
         like: '12K',
+        price: 95,
     },
     {
         title: 'burger',
         img: burger,
         review: '150 Review',
         like: '12K',
+        price: 95,
     },
     {
         title: 'dal',
         img: dal,
         review: '150 Review',
         like: '12K',
+        price: 95,
     },
     {
         title: 'vegetableJalfrez',
         img: vegetablejalfrezi,
         review: '150 Review',
         like: '12K',
+        price: 95,
     },
     {
         title: 'noodles',
         img: noodles,
         review: '150 Review',
         like: '12K',
+        price: 95,
     },
     {
         title: 'subziyan',
         img: subziyan,
         review: '150 Review',
         like: '12K',
+        price: 95,
     },
 ];
 
